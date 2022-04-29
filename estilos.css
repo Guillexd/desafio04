@@ -7,3 +7,12 @@ main{
 footer{
     background-color: aqua;
 }
+header{
+    display: inline-table;
+}
+main{
+    padding: auto;
+}
+footer{
+    z-index: 2;
+}
