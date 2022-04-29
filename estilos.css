@@ -1,42 +1,1068 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat',
+    sans-serif;
+}
+/* DEFINIENDO ÁREAS */
+body{
+    display: grid;
+    /* ES INNECESARIO AQUÍ PERO ES PARA GUIARME */
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+
+/* ENCABEZADO DE LAS PÁGINAS */
+
 header{
-    background-color: black;
+    grid-area: header;
+    background-color: rgb(6, 107, 150, .59);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
 }
-main{
-    background-color: rebeccapurple;
+
+        /* OCULTANDO REDES SOCIALES Y CHECK */
+.rs{
+    display: none;
 }
+#check{
+    display: none;
+}
+
+        /* ORDENANDO ELEMENTOS */
+header h1{
+    order: 2;
+    font-size: 40px;
+}
+.logoTitle{
+    order: 1;
+    transform: translateX(10px);
+}
+.logoTitle img{
+    height: 40px;
+}
+.imagenMenu{
+    order: 3;
+    transform: translateX(-10px);
+}
+
+        /* MENÚ HAMBURGUESA */
+header nav {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 8vh;
+    text-align: center;
+}
+
+header nav li{
+    display: none;
+}
+
+header nav li a{
+    color: rgb(177, 121, 121);
+    font-size: 20px;
+    font-weight: 550;
+    padding: 20px 30px;
+}
+
+header nav li a:active{
+    background-color: green;
+    color: white;
+}
+
+#check:checked ~ nav{
+    display: block;
+    height: 100vh;
+    background-color: rgba(6, 69, 150, 1);
+    transition: all .3s;
+    transition-timing-function: ease;
+}
+
+#check:checked~nav li{
+    display: block;
+    margin: 20px;
+    transition: all .5s;
+    transition-timing-function: ease;
+}
+
+/* PIÉ DE PÁGINA DE LAS PÁGINAS */
+
 footer{
-    background-color: aqua;
-}
-header{
-    display: inline-table;
-}
-main{
-    padding: auto;
-}
-footer{
-    z-index: 2;
+    grid-area: footer;
+    background-color: rgb(7, 163, 79, .64);
+    display: flex;
+    flex-direction: column;
+    font-weight: 1000;
 }
 
-header {
-    background-color: black;
+        /* ORDENANDO LOS DIVS */
+            /* PRIMER DIV */
+.rsh{
+    order: 3;
+}
+.ffirst{
+    order: 4;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.ffirst a{
+    border: outset 2px rgba(255, 0, 0, 0.267);
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    
+}
+.ffirst a:active{
+    background-color: rgba(102, 218, 66, 0.438);
+    color:bisque;
 }
 
-main {
-    background-color: rebeccapurple;
+            /* SEGUNDO DIV */
+.mh{
+    order: 1;
+}
+.fsecond{
+    order: 2;
+    padding: 10px 0;
+    text-align: center;
+}
+.footerul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pie{
+    padding: 10px 0;
+    width: 50vw;
 }
 
-footer {
-    background-color: aqua;
+.link2{
+    color: rgb(83, 2, 2);
 }
 
-header {
-    display: inline-table;
+            /* TERCER DIV */
+.ch{
+    order: 5;
+}
+.fthird{
+    order: 6;
+    padding: 10px 0;
+    align-self: center;
+    
+}
+.icons{
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
 }
 
-main {
-    padding: auto;
+/* MOBILE FIRST */
+
+/* CONTENIDO PRINCIPAL INDEX.HTML */
+
+.fondoIndex{
+    grid-area: main; 
+    background-color: rgb(14, 146, 150, .59);
+}
+            /* AJUSTANDO TAMAÑOS */
+.fondoIndex img{
+    width: 90vw;
+    height: 40vh;
+    border-radius: 10%;
+}
+.fondoIndex iframe{
+    width: 90vw;
+    height: 40vh;
+    border-radius: 7%;
+    padding-bottom: 10px;
+}
+.fondoIndex p{
+    padding: 0 30px 10px 30px;
+}
+.fondoIndex h2{
+    text-align: center;
+    font-weight: 1000;
+    color: brown;
+    font-size: 3em;
+    text-decoration: underline;
 }
 
-footer {
-    z-index: 2;
+            /* PRESENTACIÓN*/
+.mainarticle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+            /* CARACTERÍSTICAS*/
+.secondarticle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+}
+.firstSection{
+    background-color: rgb(6, 150, 114, .59);
+}
+.secondSection{
+    background-color: rgb(6, 107, 150, .59);
+}
+.thirdSection{
+    background-color: rgb(14, 146, 150, .59);
+}
+.secondarticle h3 {
+    text-decoration: underline;
+}
+
+            /* IMÁGENES DE LAS HABITACIONES */
+.fondoIndex aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* CONTENIDO PRINCIPAL INFORMACIÓN.HTML*/
+
+.fondoInf {
+    grid-area: main;
+    background-color: rgb(16, 176, 181, .59);
+}
+.fondoInf h2 {
+    text-align: center;
+    font-weight: 1000;
+    color: brown;
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+            /* AJUSTANDO TAMAÑOS */
+.fondoInf img {
+    width: 90vw;
+    height: 40vh;
+    border-radius: 10%;
+}
+
+.fondoInf iframe {
+    width: 100vw;
+    height: 40vh;
+    border-radius: 7%;
+    padding-bottom: 10px;
+}
+
+.fondoInf h2 {
+    text-align: center;
+    font-weight: 1000;
+    color: brown;
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+            /* TABLA */
+.infDivDos {
+    background-color: #43c9a080;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    text-align: center;
+    width: 95vw;
+    height: 50vh;
+    font-size: 4vw;
+}
+.infDivDos h3{
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+thead {
+    background-color: #246355;
+    border-bottom: solid 5px black;
+    color: white;
+}
+.color {
+    background-color: #ddd;
+}
+
+
+
+            /* IMAGENES DE LAS HABITACIONES*/
+.fondoInf aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 0 20px 0;
+}
+.fondoInf aside h3{
+    width: 100%;
+    font-size: 30px;
+    padding: 20px 0;
+    background-color: rgb(181, 34, 133, .71);
+}
+.imageOne {
+    width: 100vw;
+    background-color: rgb(181, 159, 34, .71);
+    padding: 20px 0;
+}
+.imageTwo {
+    width: 100vw;
+    background-color: rgb(105, 90, 4, .41);
+    padding: 20px 0;
+}
+.imageThree {
+    width: 100vw;
+    background-color: rgb(20, 102, 105, .41);
+    padding: 20px 0;
+}
+.imageFour{
+    width: 100vw;
+    padding-top: 20px;
+}
+
+/* CONTENIDO PRINCIPAL EMPRESA.HTML */
+
+.fondoEmp {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(186, 109, 17, .73);
+}
+.fondoEmp h2{
+    font-size: 40px;
+    background-color: rgb(105, 90, 4, .41);
+}
+
+            /* AJUSTANDO TAMAÑOS */
+
+.fondoEmp img{
+    width: 90vw;
+    height: 40vh;
+    border-radius: 40%;
+    padding: 10px 0;
+}
+            
+            /*SECTION */
+.fondoEmp h3{
+    background-color: rgb(50, 9, 184, .72);
+    padding: 10px 0;
+    font-size: 30px;
+    font-weight: 1000;
+}   
+.fondoEmp p {
+    background-color: rgb(194, 184, 10, .76);
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+/* CONTENIDO PRINCIPAL OPINIONES.HTML */
+
+.fondoOpi {
+    grid-area: main;
+    background-color: rgb(16, 176, 181, .59);
+}
+
+.fondoOpi h2 {
+    text-align: center;
+    font-weight: 1000;
+    color: brown;
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+.fondoOpi h3{
+    padding: 10px;
+    text-align: center;
+
+}
+            /* AJUSTANDO TAMAÑO */
+.fondoOpi img{
+    width: 90vw;
+    height: 16vh;
+    border-radius: 5%;
+}
+.opiDiv{
+    margin: 10px;
+}
+.mover{
+    text-align: end;
+}
+
+/* CONTENIDO PRINCIPAL CONTACTANOS.HTML */
+
+.fondoCont {
+    grid-area: main;
+    background-image: url('../imagen/tablero.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fondoCont h2{
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    font-style:italic;
+    font-weight: 1000;
+}
+
+            /* FORMULARIO */
+.contForm {
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #7f7f8fb7;
+    border-radius: 10%;
+    margin-bottom: 10px;
+}
+
+            /* PRIMER DIV */
+
+.contDivUno {
+    padding-top: 20px;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.contDivUno input {
+    padding: 10px 30px;
+    font-size: 20px;
+    border-bottom-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+
+            /* SEGUNDO DIV */
+.contDivDos {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.opcion {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+
+            /* TERCER DIV */
+.contDivTres textarea {
+    font-size: 20px;
+    width: 80vw;
+    height: 50vh;
+    border-radius: 5%;
+    padding: 20px;
+}
+
+            /* INPUT */
+.send {
+    width: 36vw;
+    height: 50px;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.61);
+    color: whitesmoke;
+    margin: 20px;
+}
+
+.send:active {
+    background-color: rgba(117, 250, 157, 0.856);
+}
+
+            /* OCULTANDO E INTERACTUANDO CON CHECKBOX, SEGUNDO DIV*/
+#individual{
+    display: none;
+}
+#matrimonial {
+    display: none;
+}
+#doble {
+    display: none;
+}
+#familiar {
+    display: none;
+}
+#compartida {
+    display: none;
+}
+
+
+
+
+@media screen and (min-width: 1000px){
+
+    /* ENCABEZADO DE LAS PÁGINAS */
+    
+    header {
+        grid-area: header;
+        background-color: rgb(6, 107, 150, .59);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 8vh;
+        position: sticky;
+        top: 0;
+        border-bottom: solid 2px black;
+    }
+    
+                /* MOSTRANDO REDES SOCIALES Y OCULTANDO MENU HAMBURGUESA */
+    .rs {
+        order: 3;
+        display: flex;
+        align-self: center;
+        width: 180px;
+        justify-content: space-between;
+        transform: translateX(-10px);
+    }
+    .imagenMenu{
+        display: none;
+    }
+    
+                /* ORDENANDO ELEMENTOS */
+    header h1 {
+        position: absolute;
+        right: 70vw;
+        font-size: 70px;
+        font-family: 'Tapestry',
+        cursive;
+        left: 15vw;
+    }
+
+    .logoTitle img {
+        height: 60px;
+    }
+
+                /* REEMPLAZANDO EL MENÚ HAMBURGUESA */
+    header nav {
+        order: 2;
+        position: relative;
+        height: auto;
+        top: 2vh;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        transform: translate(70px, 7px);
+    }
+    
+    .list {
+        margin: 0;
+        display: block;
+        transition: all .3s ease 0s;
+        width: 300px;
+        border: solid 1px;
+        border-style: none;
+        width: 300px;
+        padding: 5px 0;
+        transform: translateY(-5px);
+    }
+    .list a{
+        font-family:
+        serif;  
+    }
+    .item2{
+        background-color: beige;
+        border: 2px;
+        border-left-style: solid;
+        border-right-style: solid;
+        border-bottom-style: solid;
+    }
+    header nav li a {
+        color: rgb(0, 0, 0);
+        font-weight: 550;
+        padding: 0 60px;
+    }
+
+    .list:hover {
+        background-color: yellowgreen;
+    }
+    
+    .item2:hover {
+        background-color: red;
+    }
+
+    .item2:active{
+        background-color: #00008bb7;
+    }
+
+    header nav li a:active {
+        background-color: #00008b0e;
+        color: white;
+    }
+
+    nav ul ul {
+        display: none;
+        position: absolute;
+        transform: translate(-1px,12px);
+    }
+    
+    nav ul:hover ul {
+        display: block;
+    }
+
+    /* PIÉ DE PÁGINA DE LAS PÁGINAS */
+    
+    footer {
+        align-items: center;
+        justify-content: center;
+        height: 25vh;
+    }
+    
+                /* ORDENANDO LOS DIVS */
+                /* PRIMER DIV */
+    .rsh {
+        display: none;
+    }
+    
+    .ffirst {
+        width: 700px;  
+    }
+    
+    .ffirst a {
+        border: outset 2px red;
+    }
+    
+    .ffirst a:hover {
+        background-color: #5c4cee6b;
+    }
+    
+                /* SEGUNDO DIV */
+    .mh {
+        display: none;
+    }
+    
+    .fsecond {
+        padding: 0;
+        border: outset 1px;
+        border-color: lightblue;
+    }
+    
+    .footerul {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .pie {
+        padding: 10px 0;
+        width: 18vw;
+    }
+    
+    .link2 {
+        padding: 0 1vw;
+    }
+    
+                /* TERCER DIV */
+    .ch {
+        display: none;
+    }
+    
+    .fthird {
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        width: 70vw;
+    }
+    
+    .icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1vw;
+    }
+
+    .icons img{
+        padding-right: 20px;
+    }
+
+
+    /* CONTENIDO PRINCIPAL INDEX.HTML */
+    
+    .fondoIndex {
+        grid-area: main;
+        display: grid;
+        grid-template-areas:
+        "bienvenido bienvenido bienvenido"
+        "presentacion beneficios aside"
+        ;
+        grid-template-columns: 2fr 3fr 1fr;
+    }
+    
+                /* AJUSTANDO TAMAÑOS */
+    .fondoIndex img {
+        width: 20vw;
+        border-radius: 20%;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    
+    .fondoIndex iframe {
+        width: 30vw;
+        height: 40vh;
+        border-radius: 7%;
+        padding-bottom: 10px;
+    }
+    
+    .fondoIndex h2 {    
+        color: rgb(0, 0, 0);
+        font-size: 100px;
+        text-decoration: none;
+        font-family: 'Lora',
+        serif;
+        background-color: rgba(255, 0, 0, 0.445);
+        grid-area: bienvenido;
+    }
+    
+                /* PRESENTACIÓN */
+    .mainarticle {
+        grid-area: presentacion;
+        background-color: rgba(137, 43, 226, 0.836);
+        justify-content: space-around;
+    }
+
+                /* CARACTERÍSTICAS*/
+    .secondarticle {
+        padding: 0;
+        grid-area: beneficios;
+        background-color: gold;
+
+    }
+
+    .secondarticle h3 {
+        text-decoration: none;
+    }
+
+                        /* PRIMER ARTICLE SECTION */
+    .firstSection {
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+                        /* SEGUNDO ARTICLE SECTION */
+    .secondSection {
+        height: 60vh;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+                        /* TERCER ARTICLE SECTION */
+    .thirdSection {
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+                /* IMÁGENES DE LAS HABITACIONES */
+    .fondoIndex aside {
+        grid-area: aside;
+        background-color: rgba(255, 0, 0, 0.733);
+        justify-content: space-around;
+    }
+
+    .fondoIndex aside img{
+        height: 35vh;
+    }
+
+    .fondoIndex aside h3{
+        font-size: 40px;
+    }
+    
+    /* CONTENIDO PRINCIPAL INFORMACIÓN.HTML*/
+    
+    .fondoInf {
+        display: grid;
+        grid-template-areas: "informacion informacion"
+        "mapa aside"
+        "cuadro aside"
+        ;
+        grid-template-columns: 7fr 3fr;
+        grid-template-rows: auto auto 100vh;
+    }
+    
+    .fondoInf h2 {
+        grid-area: informacion;
+        font-size: 100px;
+        text-decoration: underline;
+        font-family: 'Lora',
+        serif;
+        text-decoration: none;
+        padding-bottom: 10px;
+        background-color: rgba(245, 222, 179, 0.308);
+    }
+    
+                /* AJUSTANDO TAMAÑOS */
+    .fondoInf img {
+        width: 95%;
+        height: 40vh;
+        border-radius: 10%;
+    }
+    
+    .fondoInf iframe {
+        width: 98%;
+        height: 98%;
+        border-radius: 7%;
+        padding-top: 10px;
+    }
+
+    .infDivUno{
+        grid-area: mapa;
+        background-color: blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+                /* TABLA */
+    .infDivDos {
+        grid-area: cuadro;
+        background-color: wheat;
+        justify-content: space-evenly;
+    }
+    
+    table {
+        width: 60vw;
+        height: 50vh;
+        font-size: 25px;
+        border: solid 1px black;
+    }
+    
+    .infDivDos h3 {
+        font-size: 60px;
+    }
+
+    thead th{
+        padding: 10px 0;
+    }
+
+    tbody a{
+        padding: 10px 4vw;
+    }
+    
+    
+                /* IMAGENES DE LAS HABITACIONES*/
+    .fondoInf aside {
+        grid-area: aside;
+        background-color: white;
+    }
+    
+    .fondoInf aside h3 {
+        width: 100%;
+        font-size: 40px;
+    }
+    
+    .imageOne {
+        width: 100%;
+    }
+    
+    .imageTwo {
+        width: 100%;
+    }
+    
+    .imageThree {
+        width: 100%;
+    }
+    
+    .imageFour {
+        width: 100%;
+    }
+
+    /* CONTENIDO PRINCIPAL EMPRESA.HTML */
+    hr{
+        display: none;
+    }
+    
+    .fondoEmp {
+        display: grid;
+        grid-template-areas: 
+        "nosotros aside"
+        "principal1 aside"
+        "principal2 aside"
+        "principal3 aside"
+        ;
+    }
+    
+    .fondoEmp h2 {
+        font-size: 40px;
+        background-color: rgb(105, 90, 4, .41);
+
+        grid-area: nosotros;
+    }
+
+                /* DEFINIENOD ÁREAS */
+    .empSectUno{
+        grid-area: principal1;
+    }
+
+    .empSectDos{
+        grid-area: principal2;
+    }
+
+    .empSectTres {
+        grid-area: principal3;
+    }
+
+    .fondoEmp aside{
+        grid-area: aside;
+        border-left: solid 1px black;
+    }
+                /* AJUSTANDO TAMAÑOS */
+    
+    .fondoEmp img {
+        width: 40vw;
+        border-radius: 40%;
+        padding: 10px 0;
+    }
+
+    .fondoEmp aside img{
+        transform: translateY(300px);
+        height: 60vh;
+        z-index: 0;
+    }
+
+    header{
+        z-index: 1;
+    }
+
+    /* CONTENIDO PRINCIPAL OPINIONES.HTML */
+    
+    .fondoOpi {
+        display: grid;
+        grid-template-areas: 
+        "opiniones opiniones"
+        "nosotros nosotros"
+        "imagen1 ."
+        ". imagen2 "
+        "imagen3 ."
+        ". imagen4 "
+        ;
+    }
+    
+    .fondoOpi h2 {
+        text-align: center;
+        font-weight: 1000;
+        color: brown;
+        font-size: 3em;
+        text-decoration: underline;
+
+        grid-area: opiniones;
+    }
+    
+    .fondoOpi h3 {
+        padding: 10px;
+        text-align: center;
+
+        grid-area: nosotros;
+    
+    }
+    
+                /* DEFINIENDO ÁREAS */
+    .imagen1{
+        grid-area: imagen1;
+    }
+
+    .imagen2 {
+        grid-area: imagen2;
+    }
+
+    .imagen3 {
+        grid-area: imagen3;
+    }
+
+    .imagen4 {
+        grid-area: imagen4;
+    }
+
+                /* AJUSTANDO TAMAÑO */
+    .fondoOpi img {
+        width: 100%;
+        height: 16vh;
+        border-radius: 5%;
+    }
+    
+    .opiDiv {
+        margin: 0;
+    }
+
+    /* CONTENIDO PRINCIPAL CONTACTANOS.HTML */
+    
+                /* FORMULARIO */
+    .contForm {
+        width: 50vw;
+    }
+    
+                        /* PRIMER DIV */
+    
+    .contDivUno {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        justify-content: space-between;
+        padding-top: 40px;     
+    }
+    
+    .contDivUno input {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        width: 40%;
+        padding: 15px;
+    }
+    
+                        /* SEGUNDO DIV */
+
+    .contDivDos label{
+        padding: 20px 8vw;
+        cursor: pointer;
+        font-size: 25px;
+        font-weight: 1000;
+}
+
+    .opcion {
+        padding: 20px;
+        margin: 10px 0;
+    }
+    
+                        /* TERCER DIV */
+
+    .contDivTres{
+        display: flex;
+        width: 52vw;
+    }            
+    .contDivTres textarea {
+        font-size: 20px;
+        width: 80%;
+        height: 30vh;
+        margin: auto;
+    }
+    
+                        /* INPUT */
+    .send {
+        width: 20vw;
+    }
+    
 }

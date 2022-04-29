@@ -4,21 +4,166 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+    <title>Home</title>
 </head>
 <body>
-    <header>header</header>
-    <main>main</main>
-    <footer>footer</footer>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum cumque beatae autem tempora, deserunt explicabo perspiciatis, quae voluptas, quas molestiae eos quasi? Quo laudantium ab temporibus voluptate mollitia modi totam.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident asperiores dicta nihil quam sit assumenda repellat optio temporibus dolor molestias, dolore vel rerum praesentium, ab iusto totam amet quia sed!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere neque impedit optio necessitatibus. Delectus ut, perferendis, at, natus odit quod rem suscipit alias harum neque doloribus vero? Vel, rerum sequi!
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti a, iste delectus eligendi assumenda atque incidunt. Laborum praesentium expedita quia eveniet labore nobis voluptatum itaque perferendis totam? Nam, sint iure.
-    </p>
-    <div>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis eius exercitationem veritatis libero accusantium, debitis vel nihil eum voluptas repudiandae tempora ipsa labore omnis accusamus dolorum numquam provident qui at!
-    </div>
-    <section>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, odit architecto cum eaque perspiciatis dolorem molestiae itaque, dolorum aliquam illum harum accusantium sunt cupiditate quam voluptates recusandae voluptatem provident nemo!</section>
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>Hotel</h1>
+        <!-- LOGO Y REDES SOCIALES -->
+        <div class="logoTitle">
+            <a href="index.html"><img src="imagen/134186_information_hotel_icon.png" alt="cama"></a>
+        </div>
+        <div class="rs">
+            <a href="https://www.facebook.com" target="_blank"><img src="imagen/fb.png" alt="facebook"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="imagen/tw.png" alt="twitter"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="imagen/inst.png" alt="instagram"></a>
+        </div>
+
+        <!-- NAVEGACIÓN -->
+        <label class="imagenMenu" for="check"><img src="imagen/menu.png" alt="icono-menu_hamburguesa"></label>
+        <input type="checkbox" id="check">
+        <nav>
+            <ul>
+                <li class="list"><a href="index.html">Home</a>
+                    <ul>
+                        <li class="list item2">
+                            <a href="documents/informacion.html">Información</a>
+                        </li>
+                        <li class="list item2">
+                            <a href="documents/empresa.html">Sobre la empresa</a>
+                        </li>
+                        <li class="list item2">
+                            <a href="documents/opiniones.html">Opiniones</a>
+                        </li>
+                        <li class="list item2">
+                            <a href="documents/contactanos.html">Contáctanos</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main class="fondoIndex">
+
+        <!-- PRESENTACIÓN -->
+        <h2>Bienvenido</h2>
+        <article class="mainarticle">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque provident itaque tempora, ex ea
+                similique? Modi ullam sunt error expedita, earum consequatur magnam, dolores molestias totam delectus, dolore in
+                rem? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo animi quisquam, possimus, delectus facere dolorum reprehenderit incidunt assumenda et, alias nisi fugit? Dignissimos neque culpa quidem eius facere asperiores nesciunt?</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9vgm-9kde5E" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem totam nam recusandae tempora delectus neque natus est tempore a molestias, qui modi suscipit culpa repudiandae eius, quidem eligendi! Earum, iste. Lorem ipsum dolor, sit amet consectetur adipisicing elit. At eveniet doloremque soluta corrupti, iste magnam quidem architecto alias eius. Sint neque temporibus sapiente magnam at consectetur tenetur. Molestiae, id iure?</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pvlbTC-tNEE" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </article>
+        
+        <!-- CARACTERÍSTICAS -->
+        <article class="secondarticle">
+            <!-- PRIMER ARTICLE SECTION -->
+            <section class="firstSection">
+                <div>
+                    <h3>Beneficio 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta? Id, facilis? Commodi alias culpa
+                        id tempore sit expedita, officia soluta facere perspiciatis harum itaque aperiam sapiente temporibus ex
+                        illum!</p>
+                </div>
+                <img
+                    src="https://lowpostactive.com/wp-content/uploads/2019/04/ed35b60f2efc1c22d2524518b74e4190e675e0d004b0144491f1c579a3ebb7_640.jpg"
+                    alt="turista">
+            </section>
+        
+            <!-- SEGUNDO ARTICLE SECTION -->
+            <section class="secondSection">
+                <div>
+                    <h3>Beneficio 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta? Id, facilis? Commodi alias culpa
+                        id
+                        tempore sit expedita, officia soluta facere perspiciatis harum itaque aperiam sapiente temporibus ex
+                        illum!
+                    </p>
+                </div>
+                <img src="http://static1.eskypartners.com/travelguide/vancouver-hotels.jpg" alt="turista">
+            </section>
+        
+            <!-- TERCER ARTICLE SECTION -->
+            <section class="thirdSection">
+                <div>
+                    <h3>Beneficio 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta? Id, facilis? Commodi alias culpa
+                        id
+                        tempore sit expedita, officia soluta facere perspiciatis harum itaque aperiam sapiente temporibus ex
+                        illum!
+                    </p>
+                </div>
+                <img
+                    src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_660,h_330/https://www.entornoturistico.com/wp-content/uploads/2017/01/Recepcionista-de-hotel-2-660x330.jpg"
+                    alt="turista">
+            </section>
+        </article>
+
+        <!-- IMAGENES DE LAS HABITACIONES -->
+        <aside>
+            <h3>Lo que ofrecemos:</h3>
+            <div>
+                <img class="asideimg" src="imagen/habitacion1.jpg" alt="habitacion1">
+                <img class="asideimg" src="imagen/habitacion2.jpg" alt="habitacion2">
+                <img class="asideimg"src="imagen/habitacion3.jpg" alt="habitacion3">
+                <img class="asideimg" src="imagen/habitacion4.jpg" alt="habitacion4">
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    
+    <footer>
+        <h3 class="rsh">Redes Sociales .....</h3>
+        <div class="ffirst">
+            <a href="https://www.tiktok.com" target="_blank">Tik tok</a>
+            <a href="https://www.youtube.com" target="_blank">Youtube</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </div>
+        <h3 class="mh">Menú .....</h3>
+        <div class="fsecond">
+            <ul class="footerul">
+                <li class="pie">
+                    <a class="link2" href="index.html">Home</a>
+                </li>
+                <li class="pie">
+                    <a class="link2" href="documents/informacion.html">Información</a>
+                </li>
+                <li class="pie pieli">
+                    <a class="link2 piea" href="documents/empresa.html">Sobre la empresa</a>
+                </li>
+                <li class="pie">
+                    <a class="link2" href="documents/opiniones.html">Opiniones</a>
+                </li>
+                <li class="pie">
+                    <a class="link2" href="documents/contactanos.html">Contáctanos</a>
+                </li>
+            </ul>
+        </div>
+        <h3 class="ch">Contactos .....</h3>
+        <div class="fthird">
+            <p class="icons"><img src="imagen/15261_cell_mobile_phone_telefono_icon.png" alt="telefono">01-23-45-67-89</p>
+            <p class="icons"><img src="imagen/1181190_email_gmail_google_mail_icon.png"alt="correo">enriquejunior@gmail.com</p>
+            <p class="icons"><img src="imagen/1814106_location_map_marker_icon.png" alt="dirección">Av.Narnia 1234567</p>
+        </div>
+    
+    </footer>
 </body>
 </html>
