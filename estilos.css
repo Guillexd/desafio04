@@ -16,3 +16,27 @@ main{
 footer{
     z-index: 2;
 }
+
+header {
+    background-color: black;
+}
+
+main {
+    background-color: rebeccapurple;
+}
+
+footer {
+    background-color: aqua;
+}
+
+header {
+    display: inline-table;
+}
+
+main {
+    padding: auto;
+}
+
+footer {
+    z-index: 2;
+}
