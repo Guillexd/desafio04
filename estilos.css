@@ -18,6 +18,21 @@ body {
     ;
 }
 
+/* ANIMACIÓN IFRAME E IMAGEN */
+iframe, img, table{
+    animation-name: movimiento;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay:.3s;
+}
+
+@keyframes movimiento {
+    0%{
+        transform: translateX(50px);
+    }
+}
+
 /* ENCABEZADO DE LAS PÁGINAS */
 
 header {
@@ -44,9 +59,9 @@ header h1 {
     font-size: 40px;
     animation-name: tituloheader;
     animation-duration: 5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 4;
     animation-timing-function: ease;
-    animation-delay:2s;
+    animation-delay:1s;
     animation-direction: alternate;
     text-align: center;
 }
@@ -301,7 +316,7 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 10px 0;
+    /* padding: 10px 0; */
 }
 
 /* CONTENIDO PRINCIPAL INFORMACIÓN.HTML*/
@@ -327,7 +342,7 @@ footer {
 }
 
 .fondoInf iframe {
-    width: 100vw;
+    width: 98vw;
     height: 40vh;
     border-radius: 7%;
     padding-bottom: 10px;
@@ -382,7 +397,7 @@ thead {
 
                     /* IMAGENES DE LAS HABITACIONES*/
 .fondoInf aside {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -661,8 +676,7 @@ thead {
         animation-duration: 3s;
         animation-iteration-count: 1;
         animation-timing-function: ease;
-        animation-delay:.1s;
-        /* animation-direction: alternate; */
+        animation-delay: .1s;
     }
 
                     /* ANIMACIÓN DE REDES SOCIALES */
@@ -1044,6 +1058,7 @@ thead {
 
                             /* IMAGENES DE LAS HABITACIONES*/
     .fondoInf aside {
+        display: flex;
         grid-area: aside;
         background-color: white;
     }
