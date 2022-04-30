@@ -29,7 +29,7 @@ header {
     height: 8vh;
 }
 
-/* OCULTANDO REDES SOCIALES Y CHECK */
+            /* OCULTANDO REDES SOCIALES Y CHECK */
 .rs {
     display: none;
 }
@@ -38,10 +38,52 @@ header {
     display: none;
 }
 
-/* ORDENANDO ELEMENTOS */
+                    /* ORDENANDO ELEMENTOS */
 header h1 {
     order: 2;
     font-size: 40px;
+    animation-name: tituloheader;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-delay:2s;
+    animation-direction: alternate;
+    text-align: center;
+}
+
+                        /* ANIMACIÓN DE H1 */
+
+header h1:hover{
+    animation-play-state: paused;
+}
+
+@keyframes tituloheader {
+    0% {
+        opacity: 1;
+        color: #fff;
+    }
+
+    15% {
+        opacity: .75;
+    }
+
+    30% {
+        opacity: .25;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: .75;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+
 }
 
 .logoTitle {
@@ -58,7 +100,8 @@ header h1 {
     transform: translateX(-10px);
 }
 
-/* MENÚ HAMBURGUESA */
+            /* MENÚ HAMBURGUESA */
+
 header nav {
     position: fixed;
     width: 100%;
