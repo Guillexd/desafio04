@@ -513,7 +513,7 @@ thead {
 
 .fondoCont {
     grid-area: main;
-    background-image: url('../imagen/tablero.jpg');
+    background-image: url('imagen/tablero.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: flex;
