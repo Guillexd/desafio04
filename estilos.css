@@ -151,8 +151,8 @@ footer {
     font-weight: 1000;
 }
 
-/* ORDENANDO LOS DIVS */
-/* PRIMER DIV */
+            /* ORDENANDO LOS DIVS */
+                    /* PRIMER DIV */
 .rsh {
     order: 3;
 }
@@ -177,7 +177,7 @@ footer {
     color: bisque;
 }
 
-/* SEGUNDO DIV */
+                    /* SEGUNDO DIV */
 .mh {
     order: 1;
 }
@@ -207,7 +207,7 @@ footer {
     color: rgb(83, 2, 2);
 }
 
-/* TERCER DIV */
+                    /* TERCER DIV */
 .ch {
     order: 5;
 }
@@ -234,7 +234,7 @@ footer {
     background-color: rgb(14, 146, 150, .59);
 }
 
-/* AJUSTANDO TAMAÑOS */
+            /* AJUSTANDO TAMAÑOS */
 .fondoIndex img {
     width: 90vw;
     height: 40vh;
@@ -260,7 +260,7 @@ footer {
     text-decoration: underline;
 }
 
-/* PRESENTACIÓN*/
+            /* PRESENTACIÓN*/
 .mainarticle {
     display: flex;
     flex-direction: column;
@@ -270,7 +270,7 @@ footer {
 }
 
 
-/* CARACTERÍSTICAS*/
+            /* CARACTERÍSTICAS*/
 .secondarticle {
     display: flex;
     flex-direction: column;
@@ -295,7 +295,7 @@ footer {
     text-decoration: underline;
 }
 
-/* IMÁGENES DE LAS HABITACIONES */
+            /* IMÁGENES DE LAS HABITACIONES */
 .fondoIndex aside {
     display: flex;
     flex-direction: column;
@@ -319,7 +319,7 @@ footer {
     text-decoration: underline;
 }
 
-/* AJUSTANDO TAMAÑOS */
+            /* AJUSTANDO TAMAÑOS */
 .fondoInf img {
     width: 90vw;
     height: 40vh;
@@ -341,7 +341,7 @@ footer {
     text-decoration: underline;
 }
 
-/* TABLA */
+            /* TABLA */
 .infDivDos {
     background-color: #43c9a080;
     display: flex;
@@ -380,7 +380,7 @@ thead {
     color: white;
 }
 
-/* IMAGENES DE LAS HABITACIONES*/
+                    /* IMAGENES DE LAS HABITACIONES*/
 .fondoInf aside {
     display: flex;
     flex-direction: column;
@@ -434,7 +434,7 @@ thead {
     background-color: rgb(105, 90, 4, .41);
 }
 
-/* AJUSTANDO TAMAÑOS */
+            /* AJUSTANDO TAMAÑOS */
 
 .fondoEmp img {
     width: 90vw;
@@ -443,7 +443,7 @@ thead {
     padding: 10px 0;
 }
 
-/*SECTION */
+            /*SECTION */
 .fondoEmp h3 {
     background-color: rgb(50, 9, 184, .72);
     padding: 10px 0;
@@ -479,7 +479,7 @@ thead {
 
 }
 
-/* AJUSTANDO TAMAÑO */
+            /* AJUSTANDO TAMAÑO */
 .fondoOpi img {
     width: 90vw;
     height: 16vh;
@@ -514,7 +514,7 @@ thead {
     font-weight: 1000;
 }
 
-/* FORMULARIO */
+                /* FORMULARIO */
 .contForm {
     width: 95vw;
     display: flex;
@@ -525,7 +525,7 @@ thead {
     margin-bottom: 10px;
 }
 
-/* PRIMER DIV */
+                        /* PRIMER DIV */
 
 .contDivUno {
     padding-top: 20px;
@@ -541,7 +541,7 @@ thead {
     border-top-right-radius: 20%;
 }
 
-/* SEGUNDO DIV */
+                        /* SEGUNDO DIV */
 .contDivDos {
     display: flex;
     flex-direction: column;
@@ -573,7 +573,7 @@ thead {
     background-color: #5ce227b9;
 }
 
-/* TERCER DIV */
+                        /* TERCER DIV */
 .contDivTres textarea {
     font-size: 20px;
     width: 80vw;
@@ -582,7 +582,7 @@ thead {
     padding: 20px;
 }
 
-/* INPUT */
+                        /* INPUT */
 .send {
     width: 36vw;
     height: 50px;
@@ -648,7 +648,7 @@ thead {
         border-bottom: solid 2px black;
     }
 
-    /* MOSTRANDO REDES SOCIALES Y OCULTANDO MENU HAMBURGUESA */
+                /* MOSTRANDO REDES SOCIALES Y OCULTANDO MENU HAMBURGUESA */
     .rs {
         order: 3;
         display: flex;
@@ -656,13 +656,46 @@ thead {
         width: 180px;
         justify-content: space-between;
         transform: translateX(-10px);
+        /* ANIMACIÓN */
+        animation-name: redessociales;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-delay:.1s;
+        /* animation-direction: alternate; */
     }
+
+                    /* ANIMACIÓN DE REDES SOCIALES */
+
+    @keyframes redessociales {
+        0%{
+            transform: translate(100px, 10px);
+        }
+        20% {
+            transform: translate(80px,-10px);
+        }
+        40% {
+            transform: translate(60px, 10px);
+        }
+        60% {
+            transform: translate(40px, -10px);
+        }
+        80% {
+            transform: translate(20px, 10px);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+
+
+
 
     .imagenMenu {
         display: none;
     }
 
-    /* ORDENANDO ELEMENTOS */
+                    /* ORDENANDO ELEMENTOS */
     header h1 {
         position: absolute;
         right: 70vw;
@@ -676,7 +709,7 @@ thead {
         height: 60px;
     }
 
-    /* REEMPLAZANDO EL MENÚ HAMBURGUESA */
+                    /* REEMPLAZANDO EL MENÚ HAMBURGUESA */
     header nav {
         order: 2;
         position: relative;
@@ -754,8 +787,8 @@ thead {
         height: 25vh;
     }
 
-    /* ORDENANDO LOS DIVS */
-    /* PRIMER DIV */
+                /* ORDENANDO LOS DIVS */
+                        /* PRIMER DIV */
     .rsh {
         display: none;
     }
@@ -772,7 +805,7 @@ thead {
         background-color: #5c4cee6b;
     }
 
-    /* SEGUNDO DIV */
+                        /* SEGUNDO DIV */
     .mh {
         display: none;
     }
@@ -805,7 +838,7 @@ thead {
         padding: 0 1vw;
     }
 
-    /* TERCER DIV */
+                        /* TERCER DIV */
     .ch {
         display: none;
     }
@@ -841,7 +874,7 @@ thead {
         grid-template-columns: 2fr 3fr 1fr;
     }
 
-    /* AJUSTANDO TAMAÑOS */
+                    /* AJUSTANDO TAMAÑOS */
     .fondoIndex img {
         width: 20vw;
         border-radius: 20%;
@@ -866,14 +899,14 @@ thead {
         grid-area: bienvenido;
     }
 
-    /* PRESENTACIÓN */
+                    /* PRESENTACIÓN */
     .mainarticle {
         grid-area: presentacion;
         background-color: rgba(137, 43, 226, 0.836);
         justify-content: space-around;
     }
 
-    /* CARACTERÍSTICAS*/
+                    /* CARACTERÍSTICAS*/
     .secondarticle {
         padding: 0;
         grid-area: beneficios;
@@ -885,7 +918,7 @@ thead {
         text-decoration: none;
     }
 
-    /* PRIMER ARTICLE SECTION */
+                            /* PRIMER ARTICLE SECTION */
     .firstSection {
         height: 60vh;
         display: flex;
@@ -894,7 +927,7 @@ thead {
     }
 
 
-    /* SEGUNDO ARTICLE SECTION */
+                            /* SEGUNDO ARTICLE SECTION */
     .secondSection {
         height: 60vh;
         display: flex;
@@ -903,7 +936,7 @@ thead {
         justify-content: center;
     }
 
-    /* TERCER ARTICLE SECTION */
+                            /* TERCER ARTICLE SECTION */
     .thirdSection {
         height: 60vh;
         display: flex;
@@ -911,7 +944,7 @@ thead {
         justify-content: center;
     }
 
-    /* IMÁGENES DE LAS HABITACIONES */
+                            /* IMÁGENES DE LAS HABITACIONES */
     .fondoIndex aside {
         grid-area: aside;
         background-color: rgba(255, 0, 0, 0.733);
@@ -949,7 +982,7 @@ thead {
         background-color: rgba(245, 222, 179, 0.308);
     }
 
-    /* AJUSTANDO TAMAÑOS */
+                        /* AJUSTANDO TAMAÑOS */
     .fondoInf img {
         width: 95%;
         height: 40vh;
@@ -971,7 +1004,7 @@ thead {
         justify-content: center;
     }
 
-    /* TABLA */
+                        /* TABLA */
     .infDivDos {
         grid-area: cuadro;
         background-color: wheat;
@@ -1009,7 +1042,7 @@ thead {
         color: white;
     }
 
-    /* IMAGENES DE LAS HABITACIONES*/
+                            /* IMAGENES DE LAS HABITACIONES*/
     .fondoInf aside {
         grid-area: aside;
         background-color: white;
@@ -1058,7 +1091,7 @@ thead {
         grid-area: nosotros;
     }
 
-    /* DEFINIENOD ÁREAS */
+                        /* DEFINIENOD ÁREAS */
     .empSectUno {
         grid-area: principal1;
     }
@@ -1076,7 +1109,7 @@ thead {
         border-left: solid 1px black;
     }
 
-    /* AJUSTANDO TAMAÑOS */
+                        /* AJUSTANDO TAMAÑOS */
 
     .fondoEmp img {
         width: 40vw;
@@ -1126,7 +1159,7 @@ thead {
 
     }
 
-    /* DEFINIENDO ÁREAS */
+                        /* DEFINIENDO ÁREAS */
     .imagen1 {
         grid-area: imagen1;
     }
@@ -1143,7 +1176,7 @@ thead {
         grid-area: imagen4;
     }
 
-    /* AJUSTANDO TAMAÑO */
+                        /* AJUSTANDO TAMAÑO */
     .fondoOpi img {
         width: 100%;
         height: 16vh;
@@ -1156,12 +1189,12 @@ thead {
 
     /* CONTENIDO PRINCIPAL CONTACTANOS.HTML */
 
-    /* FORMULARIO */
+                    /* FORMULARIO */
     .contForm {
         width: 50vw;
     }
 
-    /* PRIMER DIV */
+                            /* PRIMER DIV */
 
     .contDivUno {
         display: flex;
@@ -1178,7 +1211,7 @@ thead {
         padding: 15px;
     }
 
-    /* SEGUNDO DIV */
+                            /* SEGUNDO DIV */
 
     .contDivDos label {
         padding: 20px 8vw;
@@ -1212,7 +1245,7 @@ thead {
         background-color: #5ce227b9;
     }
 
-    /* TERCER DIV */
+                            /* TERCER DIV */
 
     .contDivTres {
         display: flex;
@@ -1226,7 +1259,7 @@ thead {
         margin: auto;
     }
 
-    /* INPUT */
+                            /* INPUT */
     .send {
         width: 20vw;
     }
