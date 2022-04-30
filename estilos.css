@@ -33,7 +33,19 @@ iframe, img, table{
         transform: translateX(50px);
     }
 }
+h2 {
+    animation-name: movimientoh2;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: .3s;
+}
 
+@keyframes movimientoh2 {
+    0% {
+        transform: translateX(-50px);
+    }
+}
 /* ENCABEZADO DE LAS PÁGINAS */
 
 header {
