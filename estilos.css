@@ -53,13 +53,26 @@ header {
     display: none;
 }
 
+                    /* ANIMACIÓN DE RS, LOGO y NAVEGACIÓN */
+.rs a:hover{
+    transform: scale(1.2);
+    transition: all .2s ease;
+}
+.logoTitle:hover{
+    transform: scale(1.2);
+    transition: all .2s ease;
+}
+.list li:hover{
+    transform: scale(1.2);
+    transition: all .2s ease;
+}
                     /* ORDENANDO ELEMENTOS */
 header h1 {
     order: 2;
     font-size: 40px;
     animation-name: tituloheader;
     animation-duration: 5s;
-    animation-iteration-count: 4;
+    animation-iteration-count: 2;
     animation-timing-function: ease;
     animation-delay:1s;
     animation-direction: alternate;
@@ -70,6 +83,7 @@ header h1 {
 
 header h1:hover{
     animation-play-state: paused;
+    transform: scale(1.2);
 }
 
 @keyframes tituloheader {
