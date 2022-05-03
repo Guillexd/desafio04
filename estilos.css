@@ -7,7 +7,15 @@
     font-family: 'Montserrat',
         sans-serif;
 }
-
+img:hover{
+    transform: rotate(360deg);
+    transition: all 2s ease;
+}
+img:active{
+    transform: translate(-5px, -5px);
+    transition: all .3s ease;
+    box-shadow: 10px 10px 0px blue;
+}
 /* DEFINIENDO ÁREAS */
 body {
     display: grid;
